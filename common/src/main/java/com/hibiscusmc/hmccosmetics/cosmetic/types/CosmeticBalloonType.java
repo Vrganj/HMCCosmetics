@@ -105,7 +105,7 @@ public class CosmeticBalloonType extends Cosmetic implements CosmeticUpdateBehav
             return;
         }
 
-        Vector velocity = newLocation.toVector().subtract(currentLocation.toVector());
+        Vector velocity = newLocation.toVector().subtract(currentLocation.toVector()).normalize();
         userBalloonManager.setLocation(newLocation);
         userBalloonManager.setVelocity(velocity.multiply(1.1));
 
